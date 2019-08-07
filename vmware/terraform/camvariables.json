@@ -13,7 +13,7 @@
     },
     {
       "name": "generalvmtemplate",
-      "label": "Openshift Template Settings"
+      "label": "OpenShift Template Settings"
     },
     {
       "name": "singlevirtualmachine",
