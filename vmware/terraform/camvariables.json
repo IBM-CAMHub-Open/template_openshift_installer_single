@@ -187,7 +187,7 @@
       "description": "The user password to connect to the virtual machine.",
       "default":"${vsphere_managed_inventory_definition.vm_os_user}",
       "type": "string",
-      "required": true,
+      "required": false,
       "secured": true,
       "label": "Virtual Machine Template User Password",
       "hidden": false,
