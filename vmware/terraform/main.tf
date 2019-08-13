@@ -63,7 +63,7 @@ module "deployVM_single" {
   vm_ipv4_prefix_length   = "${var.vm_ipv4_netmask}"
   adapter_type            = "${var.adapter_type}"
   vm_disk1_size           = "${var.ocp_node_disk1_size}"
-  datastore               = "${var.datastore}"
+  vm_disk1_datastore      = "${var.datastore}"
   vm_disk1_keep_on_remove = "${var.ocp_node_disk1_keep_on_remove}"
   vm_disk2_enable         = "false"
   vm_disk2_size           = "0"
@@ -94,7 +94,8 @@ module "host_prepare" {
   vm_ipv4_address_list = "${values(var.ocp_node_hostname_ip)}"
   vm_hostname_list     = "${element(values(var.ocp_node_hostname_ip), 0)}"
   domain_name          = "${var.vm_domain_name}"
-  installer_hostname   = "${element(values(var.ocp_node_hostname_ip), 0)}"
+  installer_hostname   = "${element(keys(var.ocp_node_hostname_ip), 0)}"
+  compute_hostname     = "${element(keys(var.ocp_node_hostname_ip), 0)}"
   random               = "${random_string.random-dir.result}"
   #######
   bastion_host        = "${var.bastion_host}"
@@ -160,7 +161,6 @@ module "generate_kubeconfig" {
   openshift_server    = "${element(keys(var.ocp_node_hostname_ip),0)}.${var.vm_domain_name}"
   openshift_port      = "8443"
   openshift_user      = "${var.openshift_user}"
-  openshift_password  = "${var.openshift_password}"
 
   #######
   bastion_host        = "${var.bastion_host}"
