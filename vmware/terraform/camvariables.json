@@ -195,9 +195,9 @@
       "group_name": "vsphere_managed_inventory_definition"
     },
     {
-      "name": "vm_vm_os_private_ssh_key",
+      "name": "vm_os_private_ssh_key",
       "description": "The user private key to connect to the virtual machine.",
-			"default": "${vsphere_managed_inventory_definition.vm_vm_os_private_ssh_key}",
+			"default": "${vsphere_managed_inventory_definition.vm_os_private_ssh_key}",
 			"type": "string",
 			"required": false,
 			"secured": false,
@@ -207,9 +207,9 @@
 			"group_name": "vsphere_managed_inventory_definition"
 		},
 		{
-      "name": "vm_vm_os_public_ssh_key",
+      "name": "vm_os_public_ssh_key",
       "description": "Virtual Machine Template User Public Key to be added to the VM",
-			"default": "${vsphere_managed_inventory_definition.vm_vm_os_public_ssh_key}",
+			"default": "${vsphere_managed_inventory_definition.vm_os_public_ssh_key}",
 			"type": "string",
 			"required": false,
 			"secured": false,
