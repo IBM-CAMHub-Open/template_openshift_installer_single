@@ -159,8 +159,8 @@
       "group_name": "vsphere_managed_inventory_definition"
 		}, 
 		{
-      "name": "vm_domain_name_name",
-      "default":"${vsphere_managed_inventory_definition.vm_domain_name_name}",
+      "name": "vm_domain_name",
+      "default":"${vsphere_managed_inventory_definition.vm_domain_name}",
 			"description": "Virtual machine domain name.",
 			"type": "string",
 			"required": true,
@@ -200,7 +200,7 @@
 			"default": "${vsphere_managed_inventory_definition.vm_os_private_ssh_key}",
 			"type": "string",
 			"required": false,
-			"secured": false,
+			"secured": true,
 			"label": "Virtual Machine Template User Private Key (base64 encoded)",
 			"hidden": false ,
 			"immutable": false,
