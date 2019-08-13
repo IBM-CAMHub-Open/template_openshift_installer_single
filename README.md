@@ -41,5 +41,5 @@ The following operating systems and platforms are supported.
 - VMware Tools must be enabled in the image for VMWare template.
 - Sudo User and password must exist and be allowed for use.
 - SELinux must be enabled. 
-https://access.redhat.com/documentation/en-us/red_hat_gluster_storage/3.1/html/installation_guide/chap-enabling_selinux
+  Steps: https://access.redhat.com/documentation/en-us/red_hat_gluster_storage/3.1/html/installation_guide/chap-enabling_selinux
 - Minimum recommended kernel version is '3.10.0-862.14.4'
