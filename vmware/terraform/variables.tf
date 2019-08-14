@@ -17,7 +17,6 @@ variable "single_node_disk1_size" {
 
 variable "single_node_disk1_keep_on_remove" {
   type = "string"
-  default = "false"
 }
 
 variable "vm_ipv4_gateway" {
@@ -38,7 +37,6 @@ variable "network" {
 
 variable "adapter_type" {
   type    = "string"
-  default = "vmxnet3"
 }
 
 variable "vm_folder" {
@@ -55,7 +53,6 @@ variable "dns_suffixes" {
 
 variable "vm_clone_timeout" {
   description = "The timeout, in minutes, to wait for the virtual machine clone to complete."
-  default = "30"
 }
 
 variable "datacenter" {

@@ -14,26 +14,6 @@
     }
   ], 
   "output_datatypes": [
-    {
-        "name": "kubeconfig",
-        "dataobject": {
-            "name":"${template_output_params.cluster_name}",
-            "attributes":[
-                {
-                    "name": "cluster_name",
-                    "value": "${template_output_params.cluster_name}"
-                },
-                {
-                    "name": "cluster_config",
-                    "value": "${template_output_params.cluster_config}"
-                },
-                {
-                    "name": "cluster_certificate_authority",
-                    "value": "${template_output_params.cluster_certificate_authority}"
-                }              
-            ]
-        }
-    }
   ],
   "input_groups": [
     {
@@ -467,33 +447,6 @@
       "system": false,
       "required": true,
       "immutable": false
-    },
-    {
-      "name": "cluster_name",
-      "type": "string",
-      "description": "Cluster name or ID.",
-      "label": "Cluster name",
-      "hidden": false,
-      "secured": false,
-      "immutable": false
-    },          
-    {
-      "name": "cluster_config",
-      "type": "string",
-      "description": "Base64 encoded content of the kubeconfig yaml file.",
-      "label": "Cluster configuration",
-      "secured": true,
-      "hidden": false,
-      "immutable": false
-    },
-    {
-        "name": "cluster_certificate_authority",
-        "type": "string",
-        "description": "Base64 encoded certificate authority used to connect to the cluster.",
-        "label": "Cluster certificate authority",
-        "secured": true,
-        "hidden": false,
-        "immutable": false
     }
   ]
 }
