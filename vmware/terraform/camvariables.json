@@ -17,7 +17,7 @@
     {
         "name": "kubeconfig",
         "dataobject": {
-            "name":"${template_input_params.cluster_name}",
+            "name":"${template_output_params.cluster_name}",
             "attributes":[
                 {
                     "name": "cluster_name",
