@@ -133,10 +133,10 @@ module "config_inventory_single" {
 module "run_installer" {
   source = "git::https://github.com/IBM-CAMHub-Open/template_openshift_modules.git?ref=3.11//run_installer"
   
-  private_key          = "${length(var.vm_os_private_ssh_key) == 0 ? "${tls_private_key.generate.private_key_pem}" : "${base64decode(var.vm_os_private_ssh_key)}"}"
-  vm_os_user           = "${var.vm_os_user}"
-  vm_os_password       = "${var.vm_os_password}"
-  master_vm_ipv4_address     = "${element(values(var.single_node_hostname_ip), 0)}"
+  private_key         = "${length(var.vm_os_private_ssh_key) == 0 ? "${tls_private_key.generate.private_key_pem}" : "${base64decode(var.vm_os_private_ssh_key)}"}"
+  vm_os_user          = "${var.vm_os_user}"
+  vm_os_password      = "${var.vm_os_password}"
+  master_node_ip      = "${element(values(var.single_node_hostname_ip), 0)}"
   openshift_user      = "${var.openshift_user}"
   openshift_password  = "${var.openshift_password}"
 
