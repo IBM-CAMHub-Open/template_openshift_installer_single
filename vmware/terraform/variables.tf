@@ -5,20 +5,10 @@ variable "single_node_hostname_ip" {
 
 variable "single_node_vcpu" {
   type    = "string"
-  default = "4"
 }
 
 variable "single_node_memory" {
   type    = "string"
-  default = "8192"
-}
-
-variable "vm_ipv4_gateway" {
-  type = "string"
-}
-
-variable "vm_ipv4_netmask" {
-  type = "string"
 }
 
 variable "single_node_disk1_size" {
@@ -28,6 +18,14 @@ variable "single_node_disk1_size" {
 variable "single_node_disk1_keep_on_remove" {
   type = "string"
   default = "false"
+}
+
+variable "vm_ipv4_gateway" {
+  type = "string"
+}
+
+variable "vm_ipv4_netmask" {
+  type = "string"
 }
 
 variable "vm_domain_name" {
@@ -87,12 +85,10 @@ variable "datastore" {
 # SSH KEY Information
 variable "vm_os_private_ssh_key" {
   type = "string"
-  default = ""
 }
 
 variable "vm_os_public_ssh_key" {
   type = "string"
-  default = ""
 }
 
 variable "rh_user" {
