@@ -319,7 +319,7 @@
       "group_name": "vsphere_managed_inventory_definition"
     },
     {
-      "name": "ocp_node_hostname_ip",
+      "name": "single_node_hostname_ip",
       "description": "OCP Node Hostname and IP Address",
       "default": {
         "Hostname": "0.0.0.0"
@@ -333,9 +333,9 @@
       "group_name": "openshift_single_node_on_vmware"
     },
     {
-      "name": "ocp_node_memory",
+      "name": "single_node_memory",
       "description": "OCP Node Memory Allocation (MB)",
-      "default": "${openshift_single_node_on_vmware.ocp_node_memory}",
+      "default": "${openshift_single_node_on_vmware.memory}",
       "type": "string",
       "required": true,
       "secured": false,
@@ -345,9 +345,9 @@
       "group_name": "openshift_single_node_on_vmware"
     },
     {
-      "name": "ocp_node_vcpu",
+      "name": "single_node_vcpu",
       "description": "OCP Node vCPU Allocation",
-      "default": "${openshift_single_node_on_vmware.ocp_node_vcpu}",
+      "default": "${openshift_single_node_on_vmware.vcpu}",
       "type": "string",
       "required": true,
       "secured": false,
@@ -357,20 +357,20 @@
       "group_name": "openshift_single_node_on_vmware"
     },
     {
-      "name": "ocp_node_disk1_keep_on_remove",
-      "default": "${openshift_single_node_on_vmware.ocp_node_disk1_keep_on_remove}",
+      "name": "single_node_disk1_keep_on_remove",
+      "default": "${openshift_single_node_on_vmware.disk1_keep_on_remove}",
       "type": "string",
       "required": true,
       "secured": false,
-      "label": "ocp_node_disk1_keep_on_remove",
+      "label": "single_node_disk1_keep_on_remove",
       "hidden": true,
       "immutable": false,
       "group_name": "openshift_single_node_on_vmware"
     },
     {
-      "name": "ocp_node_disk1_size",
+      "name": "single_node_disk1_size",
       "description": "OCP Node Disk Size Disk 1 (GB)",
-      "default": "${openshift_single_node_on_vmware.ocp_node_disk1_size}",
+      "default": "${openshift_single_node_on_vmware.disk1_size}",
       "type": "string",
       "required": true,
       "secured": false,

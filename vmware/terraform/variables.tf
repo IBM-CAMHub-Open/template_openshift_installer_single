@@ -1,14 +1,14 @@
 #single Node
-variable "ocp_node_hostname_ip" {
+variable "single_node_hostname_ip" {
   type = "map"
 }
 
-variable "ocp_node_vcpu" {
+variable "single_node_vcpu" {
   type    = "string"
   default = "4"
 }
 
-variable "ocp_node_memory" {
+variable "single_node_memory" {
   type    = "string"
   default = "8192"
 }
@@ -21,11 +21,11 @@ variable "vm_ipv4_netmask" {
   type = "string"
 }
 
-variable "ocp_node_disk1_size" {
+variable "single_node_disk1_size" {
   type = "string"
 }
 
-variable "ocp_node_disk1_keep_on_remove" {
+variable "single_node_disk1_keep_on_remove" {
   type = "string"
   default = "false"
 }
