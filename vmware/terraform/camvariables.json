@@ -185,7 +185,7 @@
     {
       "name": "vm_os_password",
       "description": "The user password to connect to the virtual machine.",
-      "default":"${vsphere_managed_inventory_definition.vm_os_user}",
+      "default":"${vsphere_managed_inventory_definition.vm_os_password}",
       "type": "string",
       "required": false,
       "secured": true,
