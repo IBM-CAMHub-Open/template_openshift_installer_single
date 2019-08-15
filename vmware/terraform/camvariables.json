@@ -449,7 +449,7 @@
       "immutable": false
     },
     {
-      "name": "openshift_node_ip",
+      "name": "openshift_single_node_ip",
       "type": "string",
       "description": "OpenShift Single Node IP.",
       "hidden": false,
