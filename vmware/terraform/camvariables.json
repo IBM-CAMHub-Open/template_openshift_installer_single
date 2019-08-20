@@ -11,6 +11,10 @@
     {
       "name": "vsphere_managed_inventory_definition",
       "label": "vSphere Managed Inventory Definition"
+    },
+    {
+      "name": "redhat_subscription",
+      "label": "RedHat Subscription"
     }
   ], 
   "output_datatypes": [
@@ -384,6 +388,7 @@
     {
       "name": "rh_user",
       "description": "Red Hat Account Username",
+      "default": "${redhat_subscription.rh_user}",
       "type": "string",
       "required": true,
       "secured": false,
@@ -395,6 +400,7 @@
     {
       "name": "rh_password",
       "description": "Red Hat Account Password",
+      "default": "${redhat_subscription.rh_password}",
       "type": "string",
       "required": true,
       "secured": true,
