@@ -136,7 +136,7 @@ module "run_installer" {
   private_key         = "${length(var.vm_os_private_ssh_key) == 0 ? "${tls_private_key.generate.private_key_pem}" : "${base64decode(var.vm_os_private_ssh_key)}"}"
   vm_os_user          = "${var.vm_os_user}"
   vm_os_password      = "${var.vm_os_password}"
-  master_node_ip      = "${element(values(var.single_node_hostname_ip), 0)}"
+  master_node_ip      = "${values(var.single_node_hostname_ip)}"
   openshift_user      = "${var.openshift_user}"
   openshift_password  = "${var.openshift_password}"
 
